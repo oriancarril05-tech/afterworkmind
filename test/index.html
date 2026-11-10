@@ -64,6 +64,16 @@
       <div id="tips"></div>
       <p class="small" style="text-align:left;margin:6px 0 0">Elige solo un paso pequeño y hazlo. Repite el test en un mes y compara.</p>
     </div>
+    <div class="card" id="mail" style="border:2px solid var(--ochre)">
+      <h2>📩 Recibe tu resultado y un plan de 7 días</h2>
+      <p>Te envío por correo tu puntuación y, durante una semana, 4 correos cortos con una idea y un paso pequeño cada uno. Gratis.</p>
+      <form id="mf">
+        <input type="email" id="me" required placeholder="Tu correo electrónico" autocomplete="email" style="width:100%;font:19px 'Source Sans 3',Arial,sans-serif;padding:14px;border:2px solid var(--line);border-radius:12px;margin:4px 0 10px">
+        <button type="submit" class="btn" style="width:100%;border:0;cursor:pointer;margin:0">Enviarme el plan</button>
+        <p class="small" style="text-align:left;margin:10px 0 0">Al enviarlo aceptas recibir correos de Afterwork Mind. Puedes darte de baja cuando quieras con un clic.</p>
+      </form>
+      <p id="mok" style="display:none;margin:0;font-weight:700;color:var(--teal)">¡Listo! Revisa tu correo en unos minutos (mira también en «Promociones» o «Spam»).</p>
+    </div>
     <div class="card">
       <h2>¿Quieres ir un poco más allá?</h2>
       <p><strong>El primer año de la jubilación</strong> es un cuaderno de 30 días para recuperar tu ritmo, tu propósito y tu gente. Una página al día, unos 15 minutos.</p>
@@ -118,6 +128,25 @@ document.getElementById('go').addEventListener('click', () => {
   document.getElementById('test').style.display = 'none';
   document.getElementById('res').style.display = 'block';
   window.scrollTo(0,0);
+});
+// suscripción a MailerLite (grupo «Test jubilación ES») con el resultado para personalizar los correos
+document.getElementById('mf').addEventListener('submit', async e => {
+  e.preventDefault();
+  const b = e.target.querySelector('button'); b.disabled = true; b.textContent = 'Enviando…';
+  const tot = val.reduce((s,x)=>s+x,0), band = BANDS.find(x => tot <= x[0]);
+  const low = val.map((v,i)=>[v,i]).sort((a,b)=>a[0]-b[0]).slice(0,2).map(x=>AREAS[x[1]]);
+  const fd = new FormData();
+  fd.append('fields[email]', document.getElementById('me').value.trim());
+  fd.append('fields[puntuacion]', String(tot));
+  fd.append('fields[nivel]', band[1]);
+  fd.append('fields[areas_bajas]', low.join(' y '));
+  fd.append('ml-submit', '1'); fd.append('anticsrf', 'true');
+  try {
+    const r = await fetch('https://assets.mailerlite.com/jsonp/2783569/forms/203736067711436722/subscribe', { method:'POST', body:fd });
+    const j = await r.json();
+    if (!j.success) throw 0;
+    document.getElementById('mf').style.display = 'none'; document.getElementById('mok').style.display = 'block';
+  } catch (_) { b.disabled = false; b.textContent = 'Enviarme el plan'; alert('No se pudo enviar. Revisa tu correo e inténtalo de nuevo.'); }
 });
 document.getElementById('again').addEventListener('click', e => { e.preventDefault(); location.reload(); });
 </script>

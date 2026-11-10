@@ -4,49 +4,122 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Test gratis: ¿Cómo va tu jubilación? · Afterwork Mind</title>
-<meta name="description" content="Un test sencillo de 5 minutos para ver cómo va tu jubilación en 8 áreas de tu vida, con un paso pequeño para cada una. Gratis, en PDF para imprimir.">
+<meta name="description" content="Un test sencillo de 5 minutos para ver cómo va tu jubilación en 8 áreas de tu vida, con un paso pequeño para cada una. Gratis.">
 <meta property="og:title" content="Test gratis: ¿Cómo va tu jubilación?">
-<meta property="og:description" content="5 minutos, 8 áreas de tu vida y un paso pequeño para cada una. PDF gratis para imprimir.">
+<meta property="og:description" content="5 minutos, 8 áreas de tu vida y un paso pequeño para cada una.">
 <meta property="og:image" content="https://oriancarril05-tech.github.io/afterworkmind/test/portada-test.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-  :root { --teal:#0f3d47; --ochre:#c8902f; --cream:#f8f2e4; --coral:#e4806b; --ink:#2b2b2b; }
+  :root { --teal:#0f3d47; --teal2:#1d5b66; --ochre:#c8902f; --cream:#f8f2e4; --coral:#e4806b; --ink:#2b2b2b; --line:#e3d9c4; }
   * { box-sizing:border-box; }
   body { margin:0; background:var(--cream); color:var(--ink); font-family:'Source Sans 3', Arial, sans-serif; font-size:19px; line-height:1.55; }
-  .wrap { max-width:640px; margin:0 auto; padding:28px 18px 48px; }
+  .wrap { max-width:640px; margin:0 auto; padding:24px 16px 48px; }
   .k { color:var(--ochre); letter-spacing:.18em; text-transform:uppercase; font-weight:700; font-size:14px; }
-  h1 { font-family:'Lora', Georgia, serif; color:var(--teal); font-size:36px; line-height:1.15; margin:8px 0 14px; }
-  h2 { font-family:'Lora', Georgia, serif; color:var(--teal); font-size:26px; margin:34px 0 10px; }
-  img.p { width:100%; border-radius:14px; box-shadow:0 8px 24px rgba(0,0,0,.15); margin:18px 0; display:block; }
-  .btn { display:block; text-align:center; background:var(--coral); color:#fff; text-decoration:none; font-weight:700; font-size:21px; padding:16px 20px; border-radius:50px; margin:20px 0 8px; }
+  h1 { font-family:'Lora', Georgia, serif; color:var(--teal); font-size:34px; line-height:1.15; margin:8px 0 12px; }
+  h2 { font-family:'Lora', Georgia, serif; color:var(--teal); font-size:25px; margin:0 0 10px; line-height:1.2; }
+  .q { background:#fff; border:1px solid var(--line); border-radius:14px; padding:14px 14px 12px; margin:12px 0; }
+  .q .lbl { font-weight:700; color:var(--teal); font-size:20px; margin-bottom:8px; display:flex; justify-content:space-between; }
+  .q .lbl span { color:var(--ochre); }
+  .nums { display:grid; grid-template-columns:repeat(10,1fr); gap:5px; }
+  .nums button { aspect-ratio:1; min-height:30px; border:2px solid var(--teal2); background:#fff; color:var(--teal2); border-radius:50%; font:700 16px 'Source Sans 3',Arial,sans-serif; padding:0; cursor:pointer; }
+  .nums button.on { background:var(--teal); border-color:var(--teal); color:#fff; }
+  .ends { display:flex; justify-content:space-between; font-size:13px; color:#8a8170; margin-top:4px; }
+  .bar { position:sticky; bottom:0; background:var(--teal); color:#fff; border-radius:14px; padding:12px 16px; display:flex; justify-content:space-between; align-items:center; margin-top:14px; font-weight:700; }
+  .bar button { background:var(--coral); color:#fff; border:0; border-radius:40px; padding:10px 18px; font:700 17px 'Source Sans 3',Arial,sans-serif; cursor:pointer; }
+  .bar button:disabled { opacity:.45; cursor:default; }
+  #res { display:none; }
+  .card { background:#fff; border-radius:14px; padding:20px; margin-top:16px; border:1px solid var(--line); }
+  .score { font-family:'Lora',Georgia,serif; font-size:52px; color:var(--teal); font-weight:700; line-height:1; }
+  .score small { font-size:22px; color:#8a8170; }
+  .tip { border-left:4px solid var(--ochre); padding:6px 0 6px 12px; margin:12px 0; }
+  .tip b { color:var(--teal); display:block; }
+  .btn { display:block; text-align:center; background:var(--coral); color:#fff; text-decoration:none; font-weight:700; font-size:20px; padding:15px 20px; border-radius:50px; margin:16px 0 6px; }
   .btn.alt { background:var(--teal); }
+  .btn.ghost { background:transparent; color:var(--teal); border:2px solid var(--teal); font-size:17px; padding:11px; }
   ul { padding-left:22px; } li { margin-bottom:6px; }
   .small { font-size:15px; color:#6b6457; text-align:center; }
-  .card { background:#fff; border-radius:14px; padding:20px; margin-top:16px; border:1px solid #e3d9c4; }
 </style>
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "0c1d1d80e27f467ea8f98078f69eb069"}'></script><!-- End Cloudflare Web Analytics -->
 </head>
 <body>
 <div class="wrap">
-  <div class="k">Regalo gratis · Afterwork Mind</div>
-  <h1>¿Cómo va tu jubilación?</h1>
-  <p>Un test sencillo de 5 minutos. Marcas del 1 al 10 cómo te sientes en 8 áreas de tu vida y descubres cuáles necesitan un poco de cariño, con un paso pequeño para cada una.</p>
-  <img class="p" src="portada-test.jpg" alt="Primera página del test ¿Cómo va tu jubilación?">
-  <a class="btn" href="Test-Como-va-tu-jubilacion.pdf" download>Descargar el test gratis (PDF)</a>
-  <p class="small">3 páginas · para imprimir o rellenar en pantalla · sin registro</p>
-
-  <div class="card">
-    <h2 style="margin-top:0">¿Quieres ir un poco más allá?</h2>
-    <p><strong>El primer año de la jubilación</strong> es un cuaderno de 30 días para recuperar tu ritmo, tu propósito y tu gente. Una página al día, unos 15 minutos.</p>
-    <ul>
-      <li>47 páginas ilustradas en letra grande</li>
-      <li>Descansar, redescubrir, reconectar y reconstruir</li>
-      <li>Mandalas para colorear y certificado final</li>
-    </ul>
-    <a class="btn alt" href="https://go.hotmart.com/O108415509I?src=test">Ver el cuaderno</a>
+  <div id="test">
+    <div class="k">Test gratis · 5 minutos</div>
+    <h1>¿Cómo va tu jubilación?</h1>
+    <p>Toca un número del 1 al 10 en cada área según cómo te sientes <strong>hoy</strong>. No hay respuestas buenas ni malas: es una foto de este momento, no una nota.</p>
+    <div id="qs"></div>
+    <div class="bar"><span id="cnt">0 de 8 respondidas</span><button id="go" disabled>Ver mi resultado</button></div>
   </div>
-  <p class="small" style="margin-top:28px">Este test es una herramienta de reflexión, no un diagnóstico médico ni psicológico.</p>
+
+  <div id="res">
+    <div class="k">Tu resultado</div>
+    <div class="card">
+      <div class="score"><span id="tot"></span> <small>de 80</small></div>
+      <h2 id="bandT" style="margin-top:10px"></h2>
+      <p id="bandP" style="margin:0"></p>
+    </div>
+    <div class="card">
+      <h2>Tus dos áreas para esta semana</h2>
+      <div id="tips"></div>
+      <p class="small" style="text-align:left;margin:6px 0 0">Elige solo un paso pequeño y hazlo. Repite el test en un mes y compara.</p>
+    </div>
+    <div class="card">
+      <h2>¿Quieres ir un poco más allá?</h2>
+      <p><strong>El primer año de la jubilación</strong> es un cuaderno de 30 días para recuperar tu ritmo, tu propósito y tu gente. Una página al día, unos 15 minutos.</p>
+      <ul>
+        <li>47 páginas ilustradas en letra grande</li>
+        <li>Descansar, redescubrir, reconectar y reconstruir</li>
+        <li>Mandalas para colorear y certificado final</li>
+      </ul>
+      <a class="btn alt" href="https://go.hotmart.com/O108415509I?src=test">Ver el cuaderno</a>
+    </div>
+    <a class="btn ghost" href="Test-Como-va-tu-jubilacion.pdf" download>Descargar el test en PDF para imprimir</a>
+    <a class="btn ghost" href="#" id="again">Hacer el test otra vez</a>
+    <p class="small" style="margin-top:24px">Este test es una herramienta de reflexión, no un diagnóstico. Si llevas semanas sintiéndote triste o sin ganas la mayor parte del día, habla con tu médico o con alguien de confianza.</p>
+  </div>
 </div>
+<script>
+const AREAS = ['Sentido de propósito','Ritmo y rutina diaria','Amistades y vida social','Pareja y familia','Movimiento y energía','Aprendizaje y curiosidad','Alegría y diversión','Esperanza en el futuro'];
+const TIPS = [
+  'Escribe tres cosas que te gustaba hacer antes de que el trabajo ocupara tu tiempo. Elige una para esta semana.',
+  'Fija una hora para levantarte y un pequeño ritual de mañana: un paseo, un café sin prisa, la radio.',
+  'Llama hoy a una persona con la que perdiste el contacto. Solo para saludar.',
+  'Propón una actividad nueva para hacer juntos y también un rato de espacio para cada uno.',
+  'Camina 15 minutos al día, a la misma hora. Lo importante es la constancia, no la distancia.',
+  'Apúntate a un taller, un curso o un club de lectura de tu barrio o biblioteca.',
+  'Recupera algo que te hacía reír: una película, una canción, un juego de mesa con la familia.',
+  'Escribe algo pequeño que te ilusione para el mes que viene y ponle fecha.'
+];
+const BANDS = [
+  [32,'En plena transición','Es muy normal en el primer año: el trabajo daba ritmo, compañía y propósito sin que lo notaras. No significa que algo esté mal contigo; significa que toca reconstruir con calma, paso a paso.'],
+  [56,'En camino','Hay áreas que ya funcionan y otras que piden atención. Pequeños cambios en las dos más bajas suelen notarse en pocas semanas.'],
+  [80,'Floreciendo','Has encontrado un buen equilibrio. Cuida lo que funciona y repite este test cada pocos meses.']
+];
+const val = Array(AREAS.length).fill(0);
+const qs = document.getElementById('qs');
+qs.innerHTML = AREAS.map((a,i)=>`<div class="q"><div class="lbl">${a}<span id="v${i}"></span></div><div class="nums">${[...Array(10)].map((_,n)=>`<button type="button" data-i="${i}" data-n="${n+1}" aria-label="${a}: ${n+1}">${n+1}</button>`).join('')}</div><div class="ends"><span>Muy mal</span><span>Muy bien</span></div></div>`).join('');
+qs.addEventListener('click', e => {
+  const b = e.target.closest('button'); if (!b) return;
+  const i = +b.dataset.i, n = +b.dataset.n; val[i] = n;
+  b.parentNode.querySelectorAll('button').forEach(x => x.classList.toggle('on', +x.dataset.n === n));
+  document.getElementById('v'+i).textContent = n;
+  const done = val.filter(Boolean).length;
+  document.getElementById('cnt').textContent = done === AREAS.length ? 'Total: ' + val.reduce((s,x)=>s+x,0) + ' de 80' : done + ' de 8 respondidas';
+  document.getElementById('go').disabled = done < AREAS.length;
+});
+document.getElementById('go').addEventListener('click', () => {
+  const tot = val.reduce((s,x)=>s+x,0), band = BANDS.find(b => tot <= b[0]);
+  document.getElementById('tot').textContent = tot;
+  document.getElementById('bandT').textContent = band[1];
+  document.getElementById('bandP').textContent = band[2];
+  const low = val.map((v,i)=>[v,i]).sort((a,b)=>a[0]-b[0]).slice(0,2).map(x=>x[1]);
+  document.getElementById('tips').innerHTML = low.map(i=>`<div class="tip"><b>${AREAS[i]} (${val[i]}/10)</b>${TIPS[i]}</div>`).join('');
+  document.getElementById('test').style.display = 'none';
+  document.getElementById('res').style.display = 'block';
+  window.scrollTo(0,0);
+});
+document.getElementById('again').addEventListener('click', e => { e.preventDefault(); location.reload(); });
+</script>
 </body>
 </html>
